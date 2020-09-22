@@ -7,3 +7,7 @@ html,
 body {
   font-size: 100%;
 }
+.scrollX-fixer {
+  user-select: none;
+  color: transparent;
+}

@@ -23,6 +23,7 @@ function Homepage() {
         <FeedItem />
         <FeedItem />
         <FeedItem />
+        <div className="scrollX-fixer">.</div>
       </div>
     </div>
   );

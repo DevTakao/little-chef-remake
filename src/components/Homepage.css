@@ -40,7 +40,3 @@
   align-items: center;
   background-color: #f5f6ff;
 }
-.feed-container div:last-child::after {
-  content: "";
-  border-right: 5rem solid transparent;
-}
