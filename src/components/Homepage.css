@@ -38,6 +38,7 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   align-items: center;
+  background-color: #f5f6ff;
 }
 .feed-container div:last-child::after {
   content: "";
