@@ -1,0 +1,7 @@
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://www.lux-review.com/wp-content/uploads/2019/06/Fine-Dining.jpg);
+  background-size: cover;
+  background-position: bottom center;
+}

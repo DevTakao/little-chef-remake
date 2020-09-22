@@ -2,7 +2,11 @@ import React from "react";
 import "./Homepage.css";
 
 function Homepage() {
-  return <div>Homepage</div>;
+  return (
+    <div className="Homepage">
+      <div className="hero-container"></div>
+    </div>
+  );
 }
 
 export default Homepage;
