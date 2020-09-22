@@ -1,4 +1,5 @@
 import React from "react";
+import FeedItem from "./FeedItem";
 import "./Homepage.css";
 
 function Homepage() {
@@ -10,6 +11,18 @@ function Homepage() {
           <h2 className="secondary-heading">Little Chef's</h2>
           <h1 className="primary-heading">Award Winning Recipes</h1>
         </div>
+      </div>
+      <div className="feed-container">
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
       </div>
     </div>
   );

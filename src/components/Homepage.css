@@ -22,11 +22,24 @@
 }
 
 .primary-heading {
+  color: rgb(252, 255, 65);
   font-size: 3rem;
-  text-shadow: 2px -2px 4px #ccc;
+  text-shadow: 2px -2px 5px #000;
 }
 
 .secondary-heading {
-  color: #eee;
+  color: #efefef;
   font-family: cursive;
+}
+
+.feed-container {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  align-items: center;
+}
+.feed-container div:last-child::after {
+  content: "";
+  border-right: 5rem solid transparent;
 }
