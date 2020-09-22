@@ -1,7 +1,13 @@
 .hero-container {
   width: 100%;
   height: 100vh;
-  background-image: url(https://www.lux-review.com/wp-content/uploads/2019/06/Fine-Dining.jpg);
+  background-image: url(https://cdn.asiatatler.com/asiatatler/i/my/2018/11/05112559-entier-scottish-cured-salmon_cover_1920x1200.jpg);
   background-size: cover;
-  background-position: bottom center;
+  background-position: top left;
+}
+
+.bg-screener {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.1);
 }
