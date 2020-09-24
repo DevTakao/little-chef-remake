@@ -1,23 +1,17 @@
 import React from "react";
 import "./FeedItem.css";
 
-function FeedItem() {
+function FeedItem({ displayData }) {
   return (
     <div className="FeedItem">
       <div className="img-container">
-        <img
-          src="https://foodieandwine.com/wp-content/uploads/2020/01/AirFryerChickenWingsRecipe.jpg"
-          alt="preview"
-        />
+        <img src={displayData.display.images[0]} alt="preview" />
       </div>
       <div className="title-container">
-        <h5 className="text-center mt-2">Chicken Wings</h5>
+        <h5 className="text-center mt-2">{displayData.display.displayName}</h5>
       </div>
       <div className="content-container p-2">
-        <p>
-          Chicken wing, chicken wing, hotdog and macaroni, chilling with my
-          homies.
-        </p>
+        <p>{displayData.content.description.text}</p>
       </div>
       <div className="button-container">
         <div className="neubutton">
