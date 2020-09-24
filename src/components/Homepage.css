@@ -32,6 +32,11 @@
   font-family: cursive;
 }
 
+.feed-area {
+  position: relative;
+  overflow: hidden;
+}
+
 .feed-container {
   min-height: 100vh;
   display: flex;

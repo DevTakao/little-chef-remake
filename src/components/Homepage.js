@@ -3,6 +3,7 @@ import FeedItem from "./FeedItem";
 import "./Homepage.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Axios from "axios";
+import Footer from "./Footer";
 
 function Homepage() {
   const [recipes, setRecipes] = useState([]);
@@ -41,11 +42,16 @@ function Homepage() {
           <h1 className="primary-heading">Recipes From Heaven</h1>
         </div>
       </div>
-      <div className="feed-container">
-        {!!recipes &&
-          recipes.length > 0 &&
-          recipes.map((recipe) => <FeedItem displayData={recipe} />)}
-        <div className="scrollX-fixer">.</div>
+      <div className="feed-area">
+        <div className="feed-container">
+          {!!recipes &&
+            recipes.length > 0 &&
+            recipes.map((recipe) => (
+              <FeedItem key={recipe["tracking-id"]} displayData={recipe} />
+            ))}
+          <div className="scrollX-fixer">.</div>
+        </div>
+        <Footer />
       </div>
     </div>
   );
