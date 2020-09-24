@@ -1,6 +1,7 @@
 import React from "react";
 import FeedItem from "./FeedItem";
 import "./Homepage.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function Homepage() {
   return (
@@ -9,7 +10,7 @@ function Homepage() {
         <div className="bg-screener"></div>
         <div className="hero-captions text-right">
           <h2 className="secondary-heading">Little Chef's</h2>
-          <h1 className="primary-heading">Award Winning Recipes</h1>
+          <h1 className="primary-heading">Recipes From Heaven</h1>
         </div>
       </div>
       <div className="feed-container">
