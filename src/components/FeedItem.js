@@ -7,7 +7,7 @@ function FeedItem({ displayData }) {
       <div className="img-container">
         <img src={displayData.display.images[0]} alt="preview" />
       </div>
-      <div className="title-container mb-2">
+      <div className="title-container m-2">
         <h5 className="text-center mt-2">{displayData.display.displayName}</h5>
       </div>
       <div className="content-container p-2">

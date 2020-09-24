@@ -45,3 +45,39 @@
   align-items: center;
   background-color: #f5f6ff;
 }
+
+.feed-scroller {
+  position: absolute;
+  background-color: rgba(20, 20, 40, 0.4);
+  color: #fff;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.feed-scroller:nth-child(1) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.feed-scroller:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.feed-scroller i {
+  font-size: 2rem;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.feed-scroller:hover {
+  background-color: rgba(20, 20, 40, 0.6);
+  cursor: pointer;
+}
+.feed-scroller:hover i {
+  transform: scale(1.2);
+}

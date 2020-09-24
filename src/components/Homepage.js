@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import FeedItem from "./FeedItem";
 import "./Homepage.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -6,11 +6,27 @@ import Axios from "axios";
 import Footer from "./Footer";
 
 function Homepage() {
-  const [recipes, setRecipes] = useState([]);
+  const feedRef = useRef(); // scrolling buttons logic
+  const [feedScrollInterval, setFeedScrollInterval] = useState(undefined);
+  const feedScrollL = () => {
+    setFeedScrollInterval(
+      setInterval(() => {
+        feedRef.current.scrollLeft -= 20;
+      }, 10)
+    );
+  };
+  const feedScrollR = () => {
+    setFeedScrollInterval(
+      setInterval(() => {
+        feedRef.current.scrollLeft += 20;
+      }, 10)
+    );
+  };
+
+  const [recipes, setRecipes] = useState([]); // initial api call logic
   useEffect(() => {
     fetchRecipes();
   }, []);
-
   const fetchRecipes = async () => {
     try {
       const res = await Axios({
@@ -43,7 +59,21 @@ function Homepage() {
         </div>
       </div>
       <div className="feed-area">
-        <div className="feed-container">
+        <span
+          className="feed-scroller"
+          onMouseDown={feedScrollL}
+          onMouseUp={() => clearInterval(feedScrollInterval)}
+        >
+          <i className="fas fa-arrow-left"></i>
+        </span>
+        <span
+          className="feed-scroller"
+          onMouseDown={feedScrollR}
+          onMouseUp={() => clearInterval(feedScrollInterval)}
+        >
+          <i className="fas fa-arrow-right"></i>
+        </span>
+        <div className="feed-container" ref={feedRef}>
           {!!recipes &&
             recipes.length > 0 &&
             recipes.map((recipe) => (
