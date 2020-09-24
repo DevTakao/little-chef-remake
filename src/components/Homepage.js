@@ -1,11 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import FeedItem from "./FeedItem";
 import "./Homepage.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Axios from "axios";
 import Footer from "./Footer";
+import { LoaderContext } from "../App.js";
+import Loader from "./Loader";
 
 function Homepage() {
+  const { isLoading, setIsLoading } = useContext(LoaderContext);
+
   const feedRef = useRef(); // scrolling buttons logic
   const [feedScrollInterval, setFeedScrollInterval] = useState(undefined);
   const feedScrollL = () => {
@@ -14,6 +18,7 @@ function Homepage() {
         feedRef.current.scrollLeft -= 20;
       }, 10)
     );
+    // console.log(feedRef.current.scrollLeft);
   };
   const feedScrollR = () => {
     setFeedScrollInterval(
@@ -21,6 +26,7 @@ function Homepage() {
         feedRef.current.scrollLeft += 20;
       }, 10)
     );
+    // console.log(feedRef.current.scrollLeft);
   };
 
   const [recipes, setRecipes] = useState([]); // initial api call logic
@@ -28,6 +34,7 @@ function Homepage() {
     fetchRecipes();
   }, []);
   const fetchRecipes = async () => {
+    setIsLoading(true);
     try {
       const res = await Axios({
         method: "get",
@@ -44,8 +51,11 @@ function Homepage() {
       });
       setRecipes(res.data.feed);
       console.log(res.data);
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
+      setRecipes([]);
+      setIsLoading(false);
     }
   };
 
@@ -59,28 +69,37 @@ function Homepage() {
         </div>
       </div>
       <div className="feed-area">
-        <span
-          className="feed-scroller"
-          onMouseDown={feedScrollL}
-          onMouseUp={() => clearInterval(feedScrollInterval)}
-        >
-          <i className="fas fa-arrow-left"></i>
-        </span>
-        <span
-          className="feed-scroller"
-          onMouseDown={feedScrollR}
-          onMouseUp={() => clearInterval(feedScrollInterval)}
-        >
-          <i className="fas fa-arrow-right"></i>
-        </span>
-        <div className="feed-container" ref={feedRef}>
-          {!!recipes &&
-            recipes.length > 0 &&
-            recipes.map((recipe) => (
-              <FeedItem key={recipe["tracking-id"]} displayData={recipe} />
-            ))}
-          <div className="scrollX-fixer">.</div>
-        </div>
+        {!isLoading && (
+          <span
+            className="feed-scroller"
+            onMouseDown={feedScrollL}
+            onMouseUp={() => clearInterval(feedScrollInterval)}
+          >
+            <i className="fas fa-arrow-left"></i>
+          </span>
+        )}
+        {!isLoading && (
+          <span
+            className="feed-scroller"
+            onMouseDown={feedScrollR}
+            onMouseUp={() => clearInterval(feedScrollInterval)}
+          >
+            <i className="fas fa-arrow-right"></i>
+          </span>
+        )}
+
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <div className="feed-container" ref={feedRef}>
+            {!!recipes &&
+              recipes.length > 0 &&
+              recipes.map((recipe) => (
+                <FeedItem key={recipe["tracking-id"]} displayData={recipe} />
+              ))}
+            <div className="scrollX-fixer">.</div>
+          </div>
+        )}
         <Footer />
       </div>
     </div>
