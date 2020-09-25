@@ -67,6 +67,33 @@ function Homepage() {
           <h2 className="secondary-heading">Little Chef's</h2>
           <h1 className="primary-heading">Recipes From Heaven</h1>
         </div>
+        <div className="clouds">
+          <img
+            src={require("../Assets/cloud1.png")}
+            alt=""
+            style={{ "--i": "1" }}
+          ></img>
+          <img
+            src={require("../Assets/cloud2.png")}
+            alt=""
+            style={{ "--i": "2" }}
+          ></img>
+          <img
+            src={require("../Assets/cloud3.png")}
+            alt=""
+            style={{ "--i": "3" }}
+          ></img>
+          <img
+            src={require("../Assets/cloud4.png")}
+            alt=""
+            style={{ "--i": "4" }}
+          ></img>
+          <img
+            src={require("../Assets/cloud5.png")}
+            alt=""
+            style={{ "--i": "5" }}
+          ></img>
+        </div>
       </div>
       <div className="feed-area">
         {!isLoading && (
