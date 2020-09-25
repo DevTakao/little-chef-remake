@@ -63,6 +63,18 @@ function Homepage() {
     <div className="Homepage">
       <div className="hero-container">
         <div className="bg-screener"></div>
+        <div className="hero-quote">
+          <p className="michelin-quote">
+            &#10045;&#10045;&#10045; "Exceptional cuisine, worth a special
+            journey!" <br /> - Le Guide Michelin 2020
+          </p>
+        </div>
+        <div className="hero-quote-logo">
+          <img
+            src="https://d2zvpvpg8wrzfh.cloudfront.net/news/michelin-guide.jpg"
+            alt="michelin logo"
+          ></img>
+        </div>
         <div className="hero-captions text-right">
           <h2 className="secondary-heading">Little Chef's</h2>
           <h1 className="primary-heading">Recipes From Heaven</h1>
