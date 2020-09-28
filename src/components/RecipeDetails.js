@@ -78,6 +78,24 @@ function RecipeDetails({ match }) {
             </div>
           </div>
         </div>
+        <div className="ingredients-div-container container-fluid d-flex justify-content-center mt-5">
+          <div className="ingredients-div container">
+            <div className="row justify-content-around">
+              <div className="col-6">
+                <h2>Ingredients</h2>
+                <hr></hr>
+                <ol className="ingredients-list">
+                  {recipeDetails.ingredientLines.map((ingredient) => (
+                    <li>{ingredient.wholeLine}</li>
+                  ))}
+                </ol>
+              </div>
+              <div className="col-5 d-flex align-items-center text-center">
+                <i className="ingredients-decor fas fa-carrot m-auto"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   );

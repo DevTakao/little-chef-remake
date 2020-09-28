@@ -1,4 +1,5 @@
-.head-div {
+.head-div,
+.ingredients-div {
   height: 50vh;
 }
 
@@ -6,7 +7,36 @@
   height: 100%;
 }
 
-/* .img-container {
-  width: 100%;
-  height: 100%;
-} */
+.ingredients-decor {
+  font-size: 25vh;
+  animation: colorSwitch 2s linear infinite;
+}
+
+@keyframes colorSwitch {
+  0% {
+    color: #fc493d;
+    transform: rotateY(0deg);
+  }
+  14% {
+    color: #ffa526;
+  }
+  28% {
+    color: #f2ef4b;
+  }
+  42% {
+    color: #6ded42;
+  }
+  56% {
+    color: #4977f5;
+  }
+  70% {
+    color: #493157;
+  }
+  84% {
+    color: #d100ce;
+  }
+  100% {
+    color: #fc493d;
+    transform: rotateY(360deg);
+  }
+}
