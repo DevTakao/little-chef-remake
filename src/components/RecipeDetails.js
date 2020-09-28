@@ -28,7 +28,7 @@ function RecipeDetails({ match }) {
         console.log(err);
       }
     };
-
+    window.scrollTo(0, 0);
     if (!recipeDetails.hasOwnProperty("description")) {
       fetchDetails();
     }
