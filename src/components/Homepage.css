@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: top right;
   position: relative;
+  user-select: none;
 }
 
 .bg-screener {
