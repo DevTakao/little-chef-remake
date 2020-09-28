@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./FeedItem.css";
+import { Link } from "react-router-dom";
+import { RecipeContext } from "../App";
+
 
 function FeedItem({ displayData }) {
+  const { recipeDetails, setRecipeDetails } = useContext(RecipeContext);
   return (
     <div className="FeedItem">
       <div className="img-container">
@@ -14,9 +18,11 @@ function FeedItem({ displayData }) {
         <p>{displayData.content.description.text}</p>
       </div>
       <div className="button-container">
-        <div className="neubutton">
-          <span>Read Recipe</span>
-        </div>
+        <Link style={{textDecoration: "none"}} to={`/${displayData["tracking-id"]}`} onClick={() => setRecipeDetails(displayData.content)}>
+            <div className="neubutton">
+              <span>Read Recipe</span>
+            </div>
+        </Link>
       </div>
     </div>
   );

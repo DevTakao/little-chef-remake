@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import FeedItem from "./FeedItem";
 import "./Homepage.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Axios from "axios";
 import Footer from "./Footer";
 import { LoaderContext } from "../App.js";
@@ -34,6 +33,7 @@ function Homepage() {
     fetchRecipes();
   }, []);
   const fetchRecipes = async () => {
+    console.log("api called");
     setIsLoading(true);
     try {
       const res = await Axios({
