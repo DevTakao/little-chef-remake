@@ -1,6 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useEffect } from "react";
 import { RecipeContext } from "../App";
+import Footer from "./Footer";
 import "./RecipeDetails.css";
 
 function RecipeDetails({ match }) {
@@ -34,10 +35,10 @@ function RecipeDetails({ match }) {
   }, []);
   return (
     recipeDetails.hasOwnProperty("description") && (
-      <div className="RecipeDetails my-2">
+      <div className="RecipeDetails">
         <div className="head-div container-fluid">
           <div className="row justify-content-around">
-            <div className="col-5">
+            <div className="col-6">
               <div
                 className="img-container"
                 style={{
@@ -79,23 +80,42 @@ function RecipeDetails({ match }) {
           </div>
         </div>
         <div className="ingredients-div-container container-fluid d-flex justify-content-center mt-5">
-          <div className="ingredients-div container">
+          <div className="ingredients-div container-fluid">
             <div className="row justify-content-around">
               <div className="col-6">
                 <h2>Ingredients</h2>
                 <hr></hr>
                 <ol className="ingredients-list">
-                  {recipeDetails.ingredientLines.map((ingredient) => (
-                    <li>{ingredient.wholeLine}</li>
+                  {recipeDetails.ingredientLines.map((ingredient, i) => (
+                    <li key={i}>{ingredient.wholeLine}</li>
                   ))}
                 </ol>
               </div>
-              <div className="col-5 d-flex align-items-center text-center">
+              <div className="col-6 d-flex align-items-center text-center">
                 <i className="ingredients-decor fas fa-carrot m-auto"></i>
               </div>
             </div>
           </div>
         </div>
+        <div className="steps-div-container container-fluid d-flex justify-content-center mt-5">
+          <div className="steps-div container-fluid">
+            <div className="row justify-content-around">
+              <div className="col-6 d-flex align-items-center text-center">
+                <i className="ingredients-decor fas fa-scroll m-auto"></i>
+              </div>
+              <div className="col-6">
+                <h2>Preparation Steps</h2>
+                <hr></hr>
+                <ol className="ingredients-list">
+                  {recipeDetails.preparationSteps.map((step, i) => (
+                    <li key={i}>{step}</li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
       </div>
     )
   );
