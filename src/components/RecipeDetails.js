@@ -85,11 +85,14 @@ function RecipeDetails({ match }) {
               <div className="col-6">
                 <h2>Ingredients</h2>
                 <hr></hr>
-                <ol className="ingredients-list">
+                <ul
+                  style={{ listStyleType: "circle" }}
+                  className="ingredients-list"
+                >
                   {recipeDetails.ingredientLines.map((ingredient, i) => (
                     <li key={i}>{ingredient.wholeLine}</li>
                   ))}
-                </ol>
+                </ul>
               </div>
               <div className="col-6 d-flex align-items-center text-center">
                 <i className="ingredients-decor fas fa-carrot m-auto"></i>
