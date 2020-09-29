@@ -62,7 +62,7 @@ function RecipeDetails({ match }) {
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
-                  backgroundColor: "#fafafa",
+                  backgroundColor: "#eee",
                 }}
               ></div>
             </div>
