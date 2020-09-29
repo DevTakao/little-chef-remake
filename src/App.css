@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +9,7 @@
 html,
 body {
   font-size: 100%;
+  font-family: "Open Sans", sans-serif;
 }
 .scrollX-fixer {
   user-select: none;

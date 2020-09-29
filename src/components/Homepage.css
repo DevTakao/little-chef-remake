@@ -59,6 +59,7 @@
 
 .primary-heading {
   color: rgb(252, 255, 65);
+  font-family: "Lobster", serif;
   font-size: 3.2rem;
   text-shadow: 2px 1px 5px #000;
 }
