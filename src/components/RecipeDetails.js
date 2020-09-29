@@ -102,7 +102,7 @@ function RecipeDetails({ match }) {
         <div className="ingredients-div-container container-fluid d-flex justify-content-center mt-5">
           <div className="ingredients-div container-fluid">
             <div className="row justify-content-around">
-              <div className="col-6">
+              <div className="col-12 col-lg-6">
                 <h2>Ingredients</h2>
                 <hr></hr>
                 <ul
@@ -117,7 +117,7 @@ function RecipeDetails({ match }) {
                   )}
                 </ul>
               </div>
-              <div className="col-6 d-flex align-items-center text-center">
+              <div className="col-12 col-lg-6 align-items-center text-center d-none d-lg-flex">
                 <i className="ingredients-decor fas fa-carrot m-auto"></i>
               </div>
             </div>
@@ -126,10 +126,10 @@ function RecipeDetails({ match }) {
         <div className="steps-div-container container-fluid d-flex justify-content-center mt-5">
           <div className="steps-div container-fluid">
             <div className="row justify-content-around">
-              <div className="col-6 d-flex align-items-center text-center">
+              <div className="col-12 col-lg-6 d-flex align-items-center text-center">
                 <i className="ingredients-decor fas fa-scroll m-auto"></i>
               </div>
-              <div className="col-6">
+              <div className="col-12 col-lg-6 pt-4">
                 <h2>Preparation Steps</h2>
                 <hr></hr>
                 <div className="ingredients-list">

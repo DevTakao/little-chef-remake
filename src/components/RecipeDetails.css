@@ -43,26 +43,8 @@
 
 .nav-logo:hover {
   cursor: pointer;
-  animation: cloudyGLow 1.5s ease-out infinite alternate;
-}
-
-@keyframes cloudyGLow {
-  0% {
-    text-shadow: 2px 0px 5px #87ceeb, -2px 0px 5px #87ceeb, 0px 2px 5px #87ceeb,
-      0px -2px 5px #87ceeb;
-  }
-  35% {
-    text-shadow: 4px 0px 8px #87ceeb, -4px 0px 8px #87ceeb, 0px 4px 8px #87ceeb,
-      0px -4px 8px #87ceeb;
-  }
-  70% {
-    text-shadow: 6px 0px 10px #87ceeb, -6px 0px 10px #87ceeb,
-      0px 6px 10px #87ceeb, 0px -6px 10px #87ceeb;
-  }
-  100% {
-    text-shadow: 8px 0px 12px #87ceeb, -8px 0px 12px #87ceeb,
-      0px 8px 12px #87ceeb, 0px -8px 12px #87ceeb;
-  }
+  color: rgb(252, 255, 65);
+  text-shadow: 1px 1px 5px #333;
 }
 
 .head-div,

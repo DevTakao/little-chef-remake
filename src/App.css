@@ -10,6 +10,7 @@ html,
 body {
   font-size: 100%;
   font-family: "Open Sans", sans-serif;
+  color: #121212;
 }
 .scrollX-fixer {
   user-select: none;

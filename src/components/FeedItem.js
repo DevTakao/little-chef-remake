@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { RecipeContext } from "../App";
 
 function FeedItem({ displayData }) {
-  const { recipeDetails, setRecipeDetails } = useContext(RecipeContext);
+  const { setRecipeDetails } = useContext(RecipeContext);
   return (
     <div className="FeedItem">
       <div className="img-container">
