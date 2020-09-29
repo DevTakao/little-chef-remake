@@ -38,12 +38,13 @@ function RecipeDetails({ match }) {
       <div className="RecipeDetails">
         <div className="head-div container-fluid">
           <div className="row justify-content-around">
-            <div className="col-6">
+            <div className="col-12 col-lg-6">
               <div
                 className="img-container"
                 style={{
                   width: "100%",
                   height: "100%",
+                  minHeight: "50vh",
                   backgroundImage: `url(${recipeDetails["details"]["images"][0]["hostedLargeUrl"]})`,
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
@@ -52,11 +53,13 @@ function RecipeDetails({ match }) {
                 }}
               ></div>
             </div>
-            <div className="col-6">
+            <div className="col-12 col-lg-6">
               <div className="head-text-div">
                 <h1>{recipeDetails.details.name}</h1>
                 <hr></hr>
-                <p>{recipeDetails.description.text}</p>
+                <p className="description-para">
+                  {recipeDetails.description.text}
+                </p>
                 <hr></hr>
                 <p>
                   <strong>

@@ -1,17 +1,27 @@
 .RecipeDetails {
   background-image: linear-gradient(180deg, #fff, #fff, #edf9ff, #e6f7ff);
-  padding: 3rem 8.33% !important;
+  padding: 3rem 2rem !important;
   position: relative;
   overflow: hidden;
 }
 
 .head-div,
 .ingredients-div {
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .head-div .row {
   height: 100%;
+}
+
+.head-text-div {
+  overflow-y: auto;
+}
+
+.description-para {
+  max-height: 6rem;
+  overflow-y: auto;
+  word-wrap: break-word;
 }
 
 .ingredients-decor {
