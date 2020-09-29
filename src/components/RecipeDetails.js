@@ -118,7 +118,7 @@ function RecipeDetails({ match }) {
                 </ul>
               </div>
               <div className="col-12 col-lg-6 align-items-center text-center d-none d-lg-flex">
-                <i className="ingredients-decor fas fa-carrot m-auto"></i>
+                <i className="decor-icon fas fa-carrot m-auto"></i>
               </div>
             </div>
           </div>
@@ -127,12 +127,12 @@ function RecipeDetails({ match }) {
           <div className="steps-div container-fluid">
             <div className="row justify-content-around">
               <div className="col-12 col-lg-6 d-flex align-items-center text-center">
-                <i className="ingredients-decor fas fa-scroll m-auto"></i>
+                <i className="decor-icon fas fa-scroll m-auto"></i>
               </div>
-              <div className="col-12 col-lg-6 pt-4">
+              <div className="col-12 col-lg-6 pt-4 pt-lg-0">
                 <h2>Preparation Steps</h2>
                 <hr></hr>
-                <div className="ingredients-list">
+                <div className="prep-steps-list">
                   {recipeDetails.preparationSteps.map((step, i) => (
                     <div className="prep-step" key={i}>
                       <h6>

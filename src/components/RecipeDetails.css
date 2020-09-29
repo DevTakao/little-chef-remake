@@ -39,17 +39,27 @@
 .nav-logo {
   font-family: "Lobster", serif;
   text-decoration: underline;
+  text-shadow: 1px 1px 5px #333;
+  color: #fff;
+  transition: all 0.3s 0.1s ease-out;
 }
 
 .nav-logo:hover {
   cursor: pointer;
   color: rgb(252, 255, 65);
-  text-shadow: 1px 1px 5px #333;
 }
 
-.head-div,
-.ingredients-div {
+.head-div {
   min-height: 50vh;
+}
+
+.ingredients-div-container {
+  min-height: 25vh;
+}
+
+.ingredients-list {
+  padding: 1rem 2rem;
+  background-color: rgba(255, 222, 176, 0.5);
 }
 
 .head-div .row {
@@ -70,7 +80,7 @@
   word-wrap: break-word;
 }
 
-.ingredients-decor {
+.decor-icon {
   font-size: 25vh;
   animation: colorSwitch 2s linear infinite;
 }
@@ -102,4 +112,15 @@
     color: #fc493d;
     transform: rotateY(360deg);
   }
+}
+
+.prep-steps-list {
+  background-color: rgba(71, 19, 0, 0.1);
+  background-clip: border-box;
+  padding: 1rem;
+}
+
+.ingredients-list,
+.prep-steps-list {
+  border-radius: 0.5rem;
 }
