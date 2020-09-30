@@ -147,6 +147,63 @@ function RecipeDetails({ match }) {
             </div>
           </div>
         </div>
+        <div className="reviews-container container-fluid mt-5">
+          <h2 className="text-center">Reviews By Popular Critics</h2>
+          <hr></hr>
+          <div className="ReviewItem">
+            <div className="reviewer-profile d-flex align-items-baseline">
+              <div className="reviewer-img-container mr-2">
+                <img
+                  src="https://yt3.ggpht.com/a/AATXAJx5R7wPL-FXcTZvQ5wjgMNoj3F3wihflT_dKQVUdQ=s900-c-k-c0xffffffff-no-rj-mo"
+                  alt="reviewer"
+                ></img>
+              </div>
+              <p className="reviewer-dn mr-2">Gordon Ramsay</p>
+              <span className="reviewer-username text-secondary">
+                (@GoddamnRamsay)
+              </span>
+            </div>
+            <div className="reviewer-rating">
+              {Array.apply(null, { length: 4 }).map((star, i) => (
+                <i className="fas fa-star" key={i}></i>
+              ))}
+              {Array.apply(null, { length: 1 }).map((star, i) => (
+                <i className="far fa-star" key={i}></i>
+              ))}
+            </div>
+            <div className="reviewer-text">
+              <p>"Finally, some good fucking food. Delicious!"</p>
+            </div>
+          </div>
+          <div className="ReviewItem mt-3">
+            <div className="reviewer-profile d-flex align-items-baseline">
+              <div className="reviewer-img-container mr-2">
+                <img
+                  src="https://i.pinimg.com/280x280_RS/04/ae/32/04ae32a5ca92a65904db2eeaa990b02b.jpg"
+                  alt="reviewer"
+                ></img>
+              </div>
+              <p className="reviewer-dn mr-2">Joe Bastianich</p>
+              <span className="reviewer-username text-secondary">
+                (@JoeMama007)
+              </span>
+            </div>
+            <div className="reviewer-rating">
+              {Array.apply(null, { length: 5 }).map((star, i) => (
+                <i className="fas fa-star" key={i}></i>
+              ))}
+              {Array.apply(null, { length: 0 }).map((star, i) => (
+                <i className="far fa-star" key={i}></i>
+              ))}
+            </div>
+            <div className="reviewer-text">
+              <p>
+                "The food was absolutely wonderful, from preparation to
+                presentation, very pleasing. Perfecto!"
+              </p>
+            </div>
+          </div>
+        </div>
         <Footer />
       </div>
     )

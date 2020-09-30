@@ -8,6 +8,12 @@
   user-select: none;
 }
 
+@media only screen and (max-width: 720px) {
+  .hero-container {
+    background-position: bottom left;
+  }
+}
+
 .bg-screener {
   width: 100%;
   height: 100%;

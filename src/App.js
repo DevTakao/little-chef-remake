@@ -15,6 +15,7 @@ export const RecipeContext = createContext({
 });
 
 function App() {
+  // This project is current responsive up to 500px minimum.
   const [isLoading, setIsLoading] = useState(true);
   const [recipeDetails, setRecipeDetails] = useState({});
   return (
