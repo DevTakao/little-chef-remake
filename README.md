@@ -1,3 +1,17 @@
+# Trello Clone Project
+
+This project is a Front-end Competent Level "Custom" Project made at YTU Software Engineering Team to prove ReactJS knowledge.
+
+# API Used
+
+### https://rapidapi.com/apidojo/api/yummly2
+
+> This project uses a .env file. Please ask it from me for testing purposes.
+
+> Images utilized under Fair Use in this project do not belong to the author.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
