@@ -63,6 +63,7 @@ function RecipeDetails({ match }) {
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   backgroundColor: "#eee",
+                  boxShadow: "3rem -2rem 7rem 2rem #fff",
                 }}
               ></div>
             </div>

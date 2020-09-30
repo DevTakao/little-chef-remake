@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   filter: opacity(0);
-  animation: fadeIn 0.8s 0.2s linear 1;
+  animation: fadeIn 1s 0.1s linear 1;
   animation-fill-mode: forwards;
 }
 
@@ -59,7 +59,8 @@
 
 .ingredients-list {
   padding: 1rem 2rem;
-  background-color: rgba(255, 222, 176, 0.5);
+  background-color: rgba(255, 230, 254, 0.5);
+  box-shadow: 0px 1rem 5rem 1rem #fff, 4rem -1.1rem 7rem 1.2rem #fff;
 }
 
 .head-div .row {
@@ -115,9 +116,11 @@
 }
 
 .prep-steps-list {
-  background-color: rgba(195, 229, 188, 0.5);
+  background-color: rgba(237, 252, 255, 0.5);
   background-clip: border-box;
   padding: 1rem;
+  box-shadow: -7rem -2.5rem 7rem 1.2rem #fff, 0px -0.5rem 6rem 1rem #fff,
+    0px 0.5rem 6rem 1rem #fff;
 }
 
 .ingredients-list,
@@ -148,4 +151,8 @@
 .reviewer-rating,
 .reviewer-text {
   margin-top: 0.5rem;
+}
+
+.col-12 h2 {
+  text-shadow: 0rem 0rem 0.5rem #fff;
 }
