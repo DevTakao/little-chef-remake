@@ -127,6 +127,27 @@
 .prep-steps-list {
   border-radius: 0.5rem;
 }
+.prep-steps-tail h6 {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  font-family: "Lobster", cursive;
+  text-shadow: 0 0 0.4rem #8fb6ff;
+  color: #fff;
+}
+.unique-huge {
+  font-size: 2rem;
+}
+.bonappetit-mark {
+  user-select: none;
+  display: inline-block;
+  font-size: 3.5rem;
+  font-family: "Open Sans", serif;
+  transform: rotateZ(25deg);
+  position: relative;
+  top: 0.8rem;
+  left: 0.5rem;
+}
 
 .reviews-container {
   background-color: white;

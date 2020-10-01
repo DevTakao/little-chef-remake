@@ -143,6 +143,12 @@ function RecipeDetails({ match }) {
                       <p>{step}</p>
                     </div>
                   ))}
+                  <div className="prep-steps-tail">
+                    <h6 className="text-center">
+                      <span className="unique-huge">B</span>uon Appetito
+                      <span className="bonappetit-mark">!</span>
+                    </h6>
+                  </div>
                 </div>
               </div>
             </div>
