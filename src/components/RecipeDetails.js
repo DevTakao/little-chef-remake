@@ -172,10 +172,10 @@ function RecipeDetails({ match }) {
             </div>
             <div className="reviewer-rating">
               {Array.apply(null, { length: 4 }).map((star, i) => (
-                <i className="fas fa-star" key={i}></i>
+                <i className="fas fa-star text-warning" key={i}></i>
               ))}
               {Array.apply(null, { length: 1 }).map((star, i) => (
-                <i className="far fa-star" key={i}></i>
+                <i className="far fa-star text-warning" key={i}></i>
               ))}
             </div>
             <div className="reviewer-text">
@@ -197,10 +197,10 @@ function RecipeDetails({ match }) {
             </div>
             <div className="reviewer-rating">
               {Array.apply(null, { length: 5 }).map((star, i) => (
-                <i className="fas fa-star" key={i}></i>
+                <i className="fas fa-star text-warning" key={i}></i>
               ))}
               {Array.apply(null, { length: 0 }).map((star, i) => (
-                <i className="far fa-star" key={i}></i>
+                <i className="far fa-star text-warning" key={i}></i>
               ))}
             </div>
             <div className="reviewer-text">

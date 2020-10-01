@@ -122,7 +122,12 @@
   box-shadow: -7rem -2.5rem 7rem 1.2rem #fff, 0px -0.5rem 6rem 1rem #fff,
     0px 0.5rem 6rem 1rem #fff;
 }
-
+.prep-step {
+  margin-top: 2.1rem;
+}
+.prep-step:first-child {
+  margin-top: 0.3rem;
+}
 .ingredients-list,
 .prep-steps-list {
   border-radius: 0.5rem;
