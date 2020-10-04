@@ -65,8 +65,11 @@ function Homepage() {
         <div className="bg-screener"></div>
         <div className="hero-quote">
           <p className="michelin-quote">
-            &#10045;&#10045;&#10045; "Exceptional cuisine, worth a special
-            journey!" <br /> - Le Guide Michelin 2020
+            &#10045;&#10045;&#10045;{" "}
+            <span className="quote-mark">&#8220; </span>
+            Exceptional cuisine, worth a special journey!
+            <span className="quote-mark"> &#8221;</span> <br /> - Le Guide
+            Michelin 2020
           </p>
         </div>
         <div className="hero-quote-logo">
