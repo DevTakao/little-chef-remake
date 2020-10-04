@@ -59,7 +59,7 @@ function RecipeDetails({ match }) {
                   minHeight: "50vh",
                   borderRadius: "2rem",
                   backgroundImage: `url(${recipeDetails["details"]["images"][0]["hostedLargeUrl"]})`,
-                  backgroundSize: "contain",
+                  backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   backgroundColor: "#a2d8fc",
